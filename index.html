@@ -1,129 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Razil Christian | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Razil Christian | Portfolio</title>
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar with theme toggle -->
-    <nav>
-        <ul>
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <button id="themeToggle" aria-label="Toggle Dark/Light Theme"><i class="fas fa-moon"></i></button>
-    </nav>
 
-    <!-- Hero Section -->
-    <div class="parallax-section" id="home">
-        <div class="parallax-content">
-            <img src="mypic.jpeg" alt="Razil Christian" loading="lazy">
-            <h1>Razil Christian</h1>
-            <p><span class="typed-text" data-text='["Student", "AI/ML Enthusiast", "Web Developer", "Problem Solver"]'></span></p>
-        </div>
+  <!-- Navbar with theme toggle + hamburger -->
+  <nav>
+    <div class="logo">Razil</div>
+
+    <!-- Navigation links -->
+    <ul>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- Actions -->
+    <div class="nav-actions">
+      <button id="themeToggle" aria-label="Toggle Dark/Light Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+      <!-- Hamburger -->
+      <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
+  </nav>
 
-    <!-- About Section -->
-    <section id="about" class="reveal">
-        <h2>About Me</h2>
-        <p>
-           Hi, I’m Razil Christian — a dynamic and results-oriented professional specializing in Artificial Intelligence and Machine Learning, with a proven track record of developing innovative solutions that drive business and technological advancements. I am currently pursuing a B.Tech in AI & ML, building upon a solid foundation established at LJ Polytechnic during my Diploma studies. Passionate about leveraging cutting-edge AI techniques, I have successfully designed and implemented a Stock Market Prediction project that applies advanced machine learning algorithms to forecast market trends with accuracy. My expertise spans data analysis, predictive modeling, and algorithm optimization, coupled with strong problem-solving skills and a commitment to continuous learning. Dedicated to applying AI for impactful real-world applications, I aspire to contribute to pioneering projects that harness intelligence to solve complex challenges and enhance decision-making processes.
-        </p>
-    </section>
 
-    <!-- ===== SKILLS SECTION ===== -->
-<section id="skills" class="reveal">
+  <!-- Hero Section -->
+  <div class="parallax-section" id="home">
+    <div class="parallax-content">
+      <img src="mypic.jpeg" alt="Razil Christian" loading="lazy">
+      <h1>Razil Christian</h1>
+      <p><span class="typed-text" 
+        data-text='["Student", "AI/ML Enthusiast", "Web Developer", "Problem Solver"]'></span></p>
+    </div>
+  </div>
+
+
+  <!-- About Section -->
+  <section id="about" class="reveal">
+    <h2>About Me</h2>
+    <p>
+      Hi, I’m Razil Christian — a dynamic and results-oriented professional specializing in Artificial Intelligence and Machine Learning...
+    </p>
+  </section>
+
+
+  <!-- Skills Section -->
+  <section id="skills" class="reveal">
     <h2>Skills</h2>
     <div class="skills-list">
-        <div class="skill">
-            <span>HTML/CSS <span class="percent">0%</span></span>
-            <div class="bar"><div class="progress" data-width="90%"></div></div>
-        </div>
-        <div class="skill">
-            <span>JavaScript <span class="percent">0%</span></span>
-            <div class="bar"><div class="progress" data-width="85%"></div></div>
-        </div>
-        <div class="skill">
-            <span>React <span class="percent">0%</span></span>
-            <div class="bar"><div class="progress" data-width="80%"></div></div>
-        </div>
-        <div class="skill">
-            <span>Python <span class="percent">0%</span></span>
-            <div class="bar"><div class="progress" data-width="88%"></div></div>
-        </div>
-        <div class="skill">
-            <span>UI/UX <span class="percent">0%</span></span>
-            <div class="bar"><div class="progress" data-width="75%"></div></div>
-        </div>
+      <div class="skill">
+        <span>HTML/CSS <span class="percent">0%</span></span>
+        <div class="bar"><div class="progress" data-width="90%"></div></div>
+      </div>
+      <div class="skill">
+        <span>JavaScript <span class="percent">0%</span></span>
+        <div class="bar"><div class="progress" data-width="85%"></div></div>
+      </div>
+      <div class="skill">
+        <span>React <span class="percent">0%</span></span>
+        <div class="bar"><div class="progress" data-width="80%"></div></div>
+      </div>
+      <div class="skill">
+        <span>Python <span class="percent">0%</span></span>
+        <div class="bar"><div class="progress" data-width="88%"></div></div>
+      </div>
+      <div class="skill">
+        <span>UI/UX <span class="percent">0%</span></span>
+        <div class="bar"><div class="progress" data-width="75%"></div></div>
+      </div>
     </div>
-</section>
+  </section>
 
 
-    <!-- Projects Section -->
-    <section id="projects" class="reveal">
-        <h2>Projects</h2>
-        <!-- Filter buttons -->
-        <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="ml">ML</button>
-            <button class="filter-btn" data-filter="web">Web</button>
-        </div>
-
-        <div class="project-grid">
-            <div class="project-card" data-category="ml" data-title="Stock Market Prediction using ML" data-desc="Predictive model using ML to forecast trends." data-img="project1.jpg">
-                <h3>Stock Market Prediction</h3>
-                <p>Developed a comprehensive Machine Learning-based forecasting model that analyzes historical stock market data to predict future price trends and market movements. The project leverages advanced techniques such as time series analysis, feature engineering, and multiple regression models to improve prediction accuracy. It incorporates data preprocessing, model training, and validation phases to optimize performance and reduce error margins. This project demonstrates the ability to apply AI/ML algorithms to complex financial datasets, providing actionable insights that can assist investors in making data-driven decisions and managing risk effectively. The model was built using Python libraries including scikit-learn, pandas, and matplotlib, and reflects a deep understanding of both technical concepts and real-world applications.</p>
-            </div>
-            <div class="project-card" data-category="web" data-title="Portfolio Website" data-desc="Responsive portfolio with animations." data-img="project2.jpg">
-                <h3>Portfolio Website</h3>
-                <p>Designed and developed a fully responsive, highly interactive portfolio website that effectively showcases projects, skills, and professional achievements. This project emphasizes clean, modern UI/UX principles with smooth animations, dynamic content filtering, and engaging user interactions such as modals and animated skill progress bars. Built using HTML, CSS, and JavaScript, it demonstrates proficiency in front-end web development, responsive design, and client-side scripting to create an intuitive and visually appealing experience across all devices. The website serves both as a personal brand platform and a demonstration of technical expertise in creating professional web applications.</p>
-            </div>
-            <div class="project-card" data-category="ml" data-title="Image Classifier" data-desc="CNN model for image classification." data-img="project3.jpg">
-                <h3>Image Classifier</h3>
-                <p>Deep learning project.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="reveal">
-        <h2>Contact</h2>
-        <form id="contactForm">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-            <div class="form-success">Message sent! 🚀</div>
-        </form>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-x-twitter"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-        </div>
-    </section>
-
-    <!-- Modal for Projects -->
-    <div class="modal" id="projectModal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <img id="modalImg" src="" alt="">
-            <h3 id="modalTitle"></h3>
-            <p id="modalDesc"></p>
-        </div>
+  <!-- Projects Section -->
+  <section id="projects" class="reveal">
+    <h2>Projects</h2>
+    
+    <!-- Filter buttons -->
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="ml">ML</button>
+      <button class="filter-btn" data-filter="web">Web</button>
     </div>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+    <div class="project-grid">
+      <div class="project-card" data-category="ml" data-title="Stock Market Prediction" data-desc="Predictive ML model for stock market trends" data-img="project1.jpg">
+        <h3>Stock Market Prediction</h3>
+        <p>ML forecasting project on market trends.</p>
+      </div>
 
-    <script src="script.js"></script>
+      <div class="project-card" data-category="web" data-title="Portfolio Website" data-desc="Responsive animated portfolio" data-img="project2.jpg">
+        <h3>Portfolio Website</h3>
+        <p>Responsive modern portfolio site.</p>
+      </div>
+
+      <div class="project-card" data-category="ml" data-title="Image Classifier" data-desc="CNN-based image classification" data-img="project3.jpg">
+        <h3>Image Classifier</h3>
+        <p>Deep learning project.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="reveal">
+    <h2>Contact</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+      <div class="form-success">Message sent! 🚀</div>
+    </form>
+
+    <div class="social-links">
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+    </div>
+  </section>
+
+
+  <!-- Project Modal -->
+  <div class="modal" id="projectModal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <img id="modalImg" src="" alt="">
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+    </div>
+  </div>
+
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+
+  <!-- Internal Script -->
+  <script>
+  // ===== HAMBURGER MENU =====
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.querySelector("nav ul");
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
+    hamburger.classList.toggle("active");
+  });
+
+  // ===== THEME TOGGLE =====
+  const themeToggle = document.getElementById("themeToggle");
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+    themeToggle.innerHTML = 
+      document.body.classList.contains("light-mode") 
+      ? '<i class="fas fa-sun"></i>' 
+      : '<i class="fas fa-moon"></i>';
+  });
+
+  // ===== BACK TO TOP =====
+  const backToTop = document.getElementById("backToTop");
+  window.addEventListener("scroll", () => {
+    backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // ===== SKILLS BAR ANIMATION =====
+  const skills = document.querySelectorAll(".progress");
+  const percents = document.querySelectorAll(".percent");
+  function animateSkills() {
+    skills.forEach((bar, i) => {
+      let width = bar.getAttribute("data-width");
+      bar.style.width = width;
+      percents[i].textContent = width;
+    });
+  }
+  window.addEventListener("scroll", () => {
+    const skillsSection = document.getElementById("skills");
+    if (skillsSection.getBoundingClientRect().top < window.innerHeight - 100) {
+      animateSkills();
+    }
+  });
+
+  // ===== REVEAL ANIMATION =====
+  function reveal() {
+    document.querySelectorAll(".reveal").forEach((el) => {
+      let windowHeight = window.innerHeight;
+      let elementTop = el.getBoundingClientRect().top;
+      if (elementTop < windowHeight - 100) {
+        el.classList.add("active");
+      }
+    });
+  }
+  window.addEventListener("scroll", reveal);
+
+  // ===== PROJECT MODAL =====
+  const modal = document.getElementById("projectModal");
+  const modalImg = document.getElementById("modalImg");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalDesc = document.getElementById("modalDesc");
+  const closeModal = document.querySelector(".close-modal");
+
+  document.querySelectorAll(".project-card").forEach(card => {
+    card.addEventListener("click", () => {
+      modal.classList.add("open");
+      modalImg.src = card.getAttribute("data-img");
+      modalTitle.textContent = card.getAttribute("data-title");
+      modalDesc.textContent = card.getAttribute("data-desc");
+    });
+  });
+  closeModal.addEventListener("click", () => modal.classList.remove("open"));
+  modal.addEventListener("click", e => {
+    if (e.target === modal) modal.classList.remove("open");
+  });
+
+  // ===== FILTER PROJECTS =====
+  const filters = document.querySelectorAll(".filter-btn");
+  const cards = document.querySelectorAll(".project-card");
+  filters.forEach(btn => {
+    btn.addEventListener("click", () => {
+      filters.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      let filter = btn.getAttribute("data-filter");
+      cards.forEach(card => {
+        card.style.display = (filter === "all" || card.dataset.category === filter)
+          ? "block" : "none";
+      });
+    });
+  });
+
+  // ===== TYPED TEXT =====
+  const typedSpan = document.querySelector(".typed-text");
+  const words = JSON.parse(typedSpan.getAttribute("data-text"));
+  let wordIndex = 0, charIndex = 0, deleting = false;
+  function typeEffect() {
+    let word = words[wordIndex];
+    typedSpan.textContent = word.substring(0, charIndex);
+    if (!deleting && charIndex < word.length) {
+      charIndex++;
+    } else if (deleting && charIndex > 0) {
+      charIndex--;
+    } else if (!deleting && charIndex === word.length) {
+      deleting = true;
+      setTimeout(typeEffect, 1500); return;
+    } else if (deleting && charIndex === 0) {
+      deleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+    }
+    setTimeout(typeEffect, deleting ? 50 : 120);
+  }
+  typeEffect();
+  </script>
+
 </body>
 </html>

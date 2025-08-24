@@ -24,9 +24,8 @@ nav {
     width: 100%;
     background: #1a052a;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 25px;
     padding: 15px 20px;
     z-index: 1000;
     transition: background 0.3s, box-shadow 0.3s;
@@ -64,6 +63,33 @@ nav ul li a.active::after {
     cursor: pointer;
 }
 
+/* Hamburger icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    transition: 0.3s;
+}
+
+/* Fix typed-text subtitle to prevent truncation */
+.typed-text {
+    display: inline-block;
+    max-width: 100%;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-weight: 600;
+    color: #ff297a;
+}
+
 /* ===== HERO SECTION ===== */
 @keyframes gradientShift {
     0%, 100% { background-position: 0% 50%; }
@@ -98,10 +124,6 @@ nav ul li a.active::after {
     border: 4px solid #ff297a;
     box-shadow: 0 0 30px #ff297aa8;
     margin-bottom: 20px;
-}
-.typed-text {
-    font-weight: 600;
-    color: #ff297a;
 }
 
 /* ===== SECTIONS ===== */
@@ -142,7 +164,6 @@ section h2 {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
 }
-
 .skill {
     background: rgba(21, 0, 53, 0.7);
     border-radius: 12px;
@@ -151,17 +172,14 @@ section h2 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: left;
 }
-
 body.light-mode .skill {
     background: #fff;
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
-
 .skill:hover {
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 0 20px #ff297a80;
 }
-
 .skill span {
     font-weight: bold;
     color: #ff297a;
@@ -169,19 +187,16 @@ body.light-mode .skill {
     justify-content: space-between;
     align-items: center;
 }
-
 .percent {
     font-weight: normal;
     color: #fff;
     font-size: 0.9rem;
     text-shadow: 0 0 5px #c33fff;
 }
-
 body.light-mode .percent {
     color: #333;
     text-shadow: none;
 }
-
 .bar {
     background: #150035;
     border-radius: 8px;
@@ -190,11 +205,9 @@ body.light-mode .percent {
     margin-top: 8px;
     box-shadow: 0 0 6px #c33fff50 inset;
 }
-
 body.light-mode .bar {
     background: #e0e0e0;
 }
-
 .progress {
     background: linear-gradient(90deg, #ff297a, #c33fff, #ff297a);
     background-size: 200% 200%;
@@ -206,9 +219,7 @@ body.light-mode .bar {
     box-shadow: 0 0 12px #ff297a90;
     transition: width 1.5s ease-out;
 }
-
 .progress::after {
-    /* Shimmer highlight */
     content: "";
     position: absolute;
     top: 0; left: -50px;
@@ -218,7 +229,6 @@ body.light-mode .bar {
     transform: skewX(-20deg);
     animation: shimmer 2s infinite;
 }
-
 @keyframes shimmer {
     0% { left: -50px; }
     100% { left: 100%; }
@@ -310,7 +320,8 @@ form {
     max-width: 450px;
     margin: auto;
 }
-input, textarea {
+input,
+textarea {
     padding: 12px;
     border-radius: 8px;
     border: 1px solid #4b006e;
@@ -365,7 +376,7 @@ button:hover {
     padding: 10px;
     color: #fff;
     font-size: 1.2rem;
-    display: none; /* hidden by default */
+    display: none;
     cursor: pointer;
     box-shadow: 0 0 10px #ff297a90;
 }
@@ -374,9 +385,56 @@ button:hover {
 }
 
 /* ===== RESPONSIVE ===== */
+
+/* Tablets */
 @media (max-width: 768px) {
     nav ul {
+        display: none; /* hide by default for hamburger */
         flex-direction: column;
-        gap: 5px;
+        background: #1a052a;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px #00000050;
+    }
+    nav ul.open {
+        display: flex;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .parallax-content img {
+        width: 130px;
+        height: 130px;
+    }
+    section {
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    nav {
+        flex-direction: row;
+        padding: 10px;
+    }
+    .parallax-content img {
+        width: 110px;
+        height: 110px;
+    }
+    section h2 {
+        font-size: 1.8rem;
+    }
+    #about p {
+        font-size: 1rem;
+        padding: 0 5px;
+    }
+    .skills-list,
+    .project-grid {
+        grid-template-columns: 1fr;
     }
 }

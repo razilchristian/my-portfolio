@@ -1,62 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Razil Christian | Portfolio</title>
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-
-  <!-- Navbar with theme toggle + hamburger -->
-  <nav>
-    <div class="logo">Razil</div>
-
-    <!-- Navigation links -->
-    <ul>
-      <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+  <!-- Navbar -->
+  <nav role="navigation" aria-label="Primary Navigation">
+    <div class="logo" tabindex="0" aria-label="Homepage link">Razil</div>
+    <ul id="navigation-menu">
+      <li><a href="#home" class="active" tabindex="0">Home</a></li>
+      <li><a href="#about" tabindex="0">About</a></li>
+      <li><a href="#skills" tabindex="0">Skills</a></li>
+      <li><a href="#projects" tabindex="0">Projects</a></li>
+      <li><a href="#contact" tabindex="0">Contact</a></li>
     </ul>
 
-    <!-- Actions -->
     <div class="nav-actions">
-      <button id="themeToggle" aria-label="Toggle Dark/Light Theme">
-        <i class="fas fa-moon"></i>
+      <button id="themeToggle" aria-label="Toggle Dark/Light Theme" tabindex="0">
+        <i class="fas fa-moon" aria-hidden="true"></i>
       </button>
-      <!-- Hamburger -->
-      <div class="hamburger" id="hamburger">
+      <button class="hamburger" id="hamburger" tabindex="0" role="button" aria-label="Toggle menu" aria-expanded="false"
+        aria-controls="navigation-menu">
+        <span class="sr-only">Menu</span>
         <div></div>
         <div></div>
         <div></div>
-      </div>
+      </button>
     </div>
   </nav>
-
 
   <!-- Hero Section -->
   <div class="parallax-section" id="home">
     <div class="parallax-content">
-      <img src="mypic.jpeg" alt="Razil Christian" loading="lazy">
+      <img src="mypic.jpeg" alt="Razil Christian" loading="lazy" />
       <h1>Razil Christian</h1>
-      <p><span class="typed-text" 
-        data-text='["Student", "AI/ML Enthusiast", "Web Developer", "Problem Solver"]'></span></p>
+      <p><span class="typed-text"
+          data-text='["Student", "AI/ML Enthusiast", "Web Developer", "Problem Solver"]'></span></p>
     </div>
   </div>
-
 
   <!-- About Section -->
   <section id="about" class="reveal">
     <h2>About Me</h2>
     <p>
-      Hi, I’m Razil Christian — a dedicated and results-driven professional specializing in Artificial Intelligence and Machine Learning. I started my academic journey with a Diploma in Artificial Intelligence and Machine Learning from LJ University, graduating in 2025 with a CGPA of 7.04. Currently, I am pursuing further studies in this field with a focus on implementing innovative solutions using advanced AI techniques. My final year project involved developing a stock market prediction system using machine learning algorithms, demonstrating my ability to apply theoretical knowledge to real-world financial data analysis and forecasting. I am passionate about leveraging AI to create impactful applications that solve complex problems and drive technological advancement.
+      Hi, I’m Razil Christian — a dedicated and results-driven professional specializing in Artificial Intelligence and
+      Machine Learning. I started my academic journey with a Diploma in Artificial Intelligence and Machine Learning from
+      LJ University, graduating in 2025 with a CGPA of 7.04. Currently, I am pursuing further studies in this field with a
+      focus on implementing innovative solutions using advanced AI techniques. My final year project involved developing a
+      stock market prediction system using machine learning algorithms, demonstrating my ability to apply theoretical
+      knowledge to real-world financial data analysis and forecasting. I am passionate about leveraging AI to create
+      impactful applications that solve complex problems and drive technological advancement.
     </p>
   </section>
-
 
   <!-- Skills Section -->
   <section id="skills" class="reveal">
@@ -64,33 +65,40 @@
     <div class="skills-list">
       <div class="skill">
         <span>HTML/CSS <span class="percent">0%</span></span>
-        <div class="bar"><div class="progress" data-width="90%"></div></div>
+        <div class="bar">
+          <div class="progress" data-width="90%"></div>
+        </div>
       </div>
       <div class="skill">
         <span>JavaScript <span class="percent">0%</span></span>
-        <div class="bar"><div class="progress" data-width="85%"></div></div>
+        <div class="bar">
+          <div class="progress" data-width="85%"></div>
+        </div>
       </div>
       <div class="skill">
         <span>React <span class="percent">0%</span></span>
-        <div class="bar"><div class="progress" data-width="80%"></div></div>
+        <div class="bar">
+          <div class="progress" data-width="80%"></div>
+        </div>
       </div>
       <div class="skill">
         <span>Python <span class="percent">0%</span></span>
-        <div class="bar"><div class="progress" data-width="88%"></div></div>
+        <div class="bar">
+          <div class="progress" data-width="88%"></div>
+        </div>
       </div>
       <div class="skill">
         <span>UI/UX <span class="percent">0%</span></span>
-        <div class="bar"><div class="progress" data-width="75%"></div></div>
+        <div class="bar">
+          <div class="progress" data-width="75%"></div>
+        </div>
       </div>
     </div>
   </section>
 
-
   <!-- Projects Section -->
   <section id="projects" class="reveal">
     <h2>Projects</h2>
-    
-    <!-- Filter buttons -->
     <div class="filter-buttons">
       <button class="filter-btn active" data-filter="all">All</button>
       <button class="filter-btn" data-filter="ml">ML</button>
@@ -98,23 +106,46 @@
     </div>
 
     <div class="project-grid">
-      <div class="project-card" data-category="ml" data-title="Stock Market Prediction" data-desc="Predictive ML model for stock market trends" data-img="project1.jpg">
+      <div class="project-card" data-category="ml" data-title="Stock Market Prediction"
+        data-desc="Predictive ML model for stock market trends" data-img="project1.jpg">
         <h3>Stock Market Prediction</h3>
-        <p>A comprehensive machine learning project focused on predicting stock market trends by analyzing historical financial data. The model leverages advanced algorithms and time series analysis techniques to identify patterns and forecast future market movements with improved accuracy. This project integrates data preprocessing, feature engineering, model training, and evaluation to deliver actionable insights that can assist investors in making data-driven decisions and managing investment risks effectively. Developed using Python and key libraries such as scikit-learn and pandas, this project reflects a strong understanding of both machine learning concepts and real-world financial dynamics.</p>
+        <p>
+          A comprehensive machine learning project focused on predicting stock market trends by analyzing historical
+          financial data. The model leverages advanced algorithms and time series analysis techniques to identify
+          patterns and forecast future market movements with improved accuracy. This project integrates data preprocessing,
+          feature engineering, model training, and evaluation to deliver actionable insights that can assist investors in
+          making data-driven decisions and managing investment risks effectively. Developed using Python and key libraries
+          such as scikit-learn and pandas, this project reflects a strong understanding of both machine learning concepts
+          and real-world financial dynamics.
+        </p>
       </div>
 
-      <div class="project-card" data-category="web" data-title="Portfolio Website" data-desc="Responsive animated portfolio" data-img="project2.jpg">
+      <div class="project-card" data-category="web" data-title="Portfolio Website" data-desc="Responsive animated portfolio"
+        data-img="project2.jpg">
         <h3>Portfolio Website</h3>
-        <p>A fully responsive and visually appealing portfolio website designed to showcase skills, projects, and professional achievements effectively across all devices. This project incorporates modern UI/UX principles, smooth animations, and dynamic content filtering to create an interactive and user-friendly experience. Built with HTML, CSS, and JavaScript, it demonstrates proficiency in front-end development, responsive design, and client-side scripting, serving as both a personal branding platform and a demonstration of technical expertise in web development.</p>
+        <p>
+          A fully responsive and visually appealing portfolio website designed to showcase skills, projects, and
+          professional achievements effectively across all devices. This project incorporates modern UI/UX principles,
+          smooth animations, and dynamic content filtering to create an interactive and user-friendly experience. Built
+          with HTML, CSS, and JavaScript, it demonstrates proficiency in front-end development, responsive design, and
+          client-side scripting, serving as both a personal branding platform and a demonstration of technical expertise in
+          web development.
+        </p>
       </div>
 
-      <div class="project-card" data-category="ml" data-title="Image Classifier" data-desc="CNN-based image classification" data-img="project3.jpg">
+      <div class="project-card" data-category="ml" data-title="Image Classifier" data-desc="CNN-based image classification"
+        data-img="project3.jpg">
         <h3>Image Classifier</h3>
-        <p>Deep learning project.</p>
+        <p>
+          Deep learning project leveraging convolutional neural networks (CNNs) for image classification. This project
+          involved dataset preprocessing, architecture design, model training, and evaluation to achieve high accuracy in
+          classifying various image categories. Tools utilized include TensorFlow and Keras libraries in Python to
+          implement end-to-end deep learning workflows, highlighting expertise in computer vision and neural network
+          operations.
+        </p>
       </div>
     </div>
   </section>
-
 
   <!-- Contact Section -->
   <section id="contact" class="reveal">
@@ -136,6 +167,19 @@
     </div>
   </section>
 
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <p>© 2025 Razil Christian. All rights reserved.</p>
+      <div class="footer-social-links">
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+  </footer>
 
   <!-- Project Modal -->
   <div class="modal" id="projectModal">
@@ -147,126 +191,10 @@
     </div>
   </div>
 
-
   <!-- Back to Top Button -->
   <button id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
-
-  <!-- Internal Script -->
-  <script>
-  // ===== HAMBURGER MENU =====
-  const hamburger = document.getElementById("hamburger");
-  const navMenu = document.querySelector("nav ul");
-  hamburger.addEventListener("click", () => {
-    navMenu.classList.toggle("open");
-    hamburger.classList.toggle("active");
-  });
-
-  // ===== THEME TOGGLE =====
-  const themeToggle = document.getElementById("themeToggle");
-  themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("light-mode");
-    themeToggle.innerHTML = 
-      document.body.classList.contains("light-mode") 
-      ? '<i class="fas fa-sun"></i>' 
-      : '<i class="fas fa-moon"></i>';
-  });
-
-  // ===== BACK TO TOP =====
-  const backToTop = document.getElementById("backToTop");
-  window.addEventListener("scroll", () => {
-    backToTop.style.display = window.scrollY > 300 ? "block" : "none";
-  });
-  backToTop.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
-  // ===== SKILLS BAR ANIMATION =====
-  const skills = document.querySelectorAll(".progress");
-  const percents = document.querySelectorAll(".percent");
-  function animateSkills() {
-    skills.forEach((bar, i) => {
-      let width = bar.getAttribute("data-width");
-      bar.style.width = width;
-      percents[i].textContent = width;
-    });
-  }
-  window.addEventListener("scroll", () => {
-    const skillsSection = document.getElementById("skills");
-    if (skillsSection.getBoundingClientRect().top < window.innerHeight - 100) {
-      animateSkills();
-    }
-  });
-
-  // ===== REVEAL ANIMATION =====
-  function reveal() {
-    document.querySelectorAll(".reveal").forEach((el) => {
-      let windowHeight = window.innerHeight;
-      let elementTop = el.getBoundingClientRect().top;
-      if (elementTop < windowHeight - 100) {
-        el.classList.add("active");
-      }
-    });
-  }
-  window.addEventListener("scroll", reveal);
-
-  // ===== PROJECT MODAL =====
-  const modal = document.getElementById("projectModal");
-  const modalImg = document.getElementById("modalImg");
-  const modalTitle = document.getElementById("modalTitle");
-  const modalDesc = document.getElementById("modalDesc");
-  const closeModal = document.querySelector(".close-modal");
-
-  document.querySelectorAll(".project-card").forEach(card => {
-    card.addEventListener("click", () => {
-      modal.classList.add("open");
-      modalImg.src = card.getAttribute("data-img");
-      modalTitle.textContent = card.getAttribute("data-title");
-      modalDesc.textContent = card.getAttribute("data-desc");
-    });
-  });
-  closeModal.addEventListener("click", () => modal.classList.remove("open"));
-  modal.addEventListener("click", e => {
-    if (e.target === modal) modal.classList.remove("open");
-  });
-
-  // ===== FILTER PROJECTS =====
-  const filters = document.querySelectorAll(".filter-btn");
-  const cards = document.querySelectorAll(".project-card");
-  filters.forEach(btn => {
-    btn.addEventListener("click", () => {
-      filters.forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      let filter = btn.getAttribute("data-filter");
-      cards.forEach(card => {
-        card.style.display = (filter === "all" || card.dataset.category === filter)
-          ? "block" : "none";
-      });
-    });
-  });
-
-  // ===== TYPED TEXT =====
-  const typedSpan = document.querySelector(".typed-text");
-  const words = JSON.parse(typedSpan.getAttribute("data-text"));
-  let wordIndex = 0, charIndex = 0, deleting = false;
-  function typeEffect() {
-    let word = words[wordIndex];
-    typedSpan.textContent = word.substring(0, charIndex);
-    if (!deleting && charIndex < word.length) {
-      charIndex++;
-    } else if (deleting && charIndex > 0) {
-      charIndex--;
-    } else if (!deleting && charIndex === word.length) {
-      deleting = true;
-      setTimeout(typeEffect, 1500); return;
-    } else if (deleting && charIndex === 0) {
-      deleting = false;
-      wordIndex = (wordIndex + 1) % words.length;
-    }
-    setTimeout(typeEffect, deleting ? 50 : 120);
-  }
-  typeEffect();
-  </script>
-
+  <script src="script.js"></script>
 </body>
+
 </html>
